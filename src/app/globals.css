@@ -6,11 +6,15 @@
 :root {
   --color-green-lightest: oklch(0.86 0.0519 105.01 / 50%); /* ljusgrön m 50% opacitet */
   --color-green-light: oklch(0.86 0.0519 105.01);   /* Ljusgrön */
+  --color-pink-lightest: oklch(0.96 0.0173 17.55); /* Ljusast rosa */
   --color-pink-light: oklch(0.9 0.021 17.55);    /* Ljusrosa */
   --color-green-dark: oklch(0.53 0.0565 104.28);    /* Mörkgrön */
   --color-pink-dark: oklch(0.62 0.0865 17.68);     /* Mörkrosa */
+  --color-pink-mid: oklch(0.75 0.10 17.68);  /* Mellanrosa – lättare än dark, mer kontrast än light */
   --color-pink-sharp: oklch(0.75 0.18 17.68); /* Skarp rosa  */
   --color-black: oklch(0.02 0.03 0.05);         /* Svart */
+  --color-text-soft-dark: oklch(0.24 0.05 25);  /* Mörk brungrå */
+  --color-text-dark-green: oklch(0.44 0.0565 104.28); /* mörkgrön text */
   --color-white: #ffffff;                       /* Vit */
 }
 
