@@ -27,10 +27,10 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/cart" className="font-medium text-2xl">
+          <Link href="/cart" className="font-medium text-2xl relative">
               Kundvagn 
               {itemCount > 0 && (
-                <span className="text-sm bg-red-600 text-white rounded-full px-2">
+                <span className="text-sm bg-[var(--color-pink-sharp)] text-white rounded-full px-2 py-0.5 absolute -top-2 -right-5">
                   {itemCount}
                 </span>
               )}
