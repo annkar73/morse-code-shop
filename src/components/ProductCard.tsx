@@ -46,16 +46,16 @@ export function ProductCard({ product }: { product: IProduct }) {
         </CardContent>
       </Card>
 
-      {/* Modal för stor bild */}
+      {/* Modal for image preview */}
       {showModal && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
           <div className="relative max-w-[90vw] max-h-[90vh] p-4">
-            <button
+            <Button
               onClick={() => setShowModal(false)}
               className="absolute top-5 right-5 text-black text-xl font-bold bg-white bg-opacity-60 rounded-full px-3 py-1 hover:bg-opacity-80"
             >
               ✕
-            </button>
+            </Button>
             <Image
               src={product.image}
               alt={`Stor bild på ${product.name}`}
