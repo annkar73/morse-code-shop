@@ -17,17 +17,17 @@ export function MainNav() {
     <NavigationMenu className="px-4 py-2">
       <NavigationMenuList className="w-full flex justify-between gap-4">
         <NavigationMenuItem>
-          <Link href="/" className="font-medium text-xl">
+          <Link href="/" className="font-medium text-2xl">
           Hem
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/products" className="font-medium text-xl">
+          <Link href="/products" className="font-medium text-2xl">
           Produkter
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/cart" className="font-medium text-xl">
+          <Link href="/cart" className="font-medium text-2xl">
               Kundvagn 
               {itemCount > 0 && (
                 <span className="text-sm bg-red-600 text-white rounded-full px-2">
