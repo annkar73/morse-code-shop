@@ -77,7 +77,7 @@ export default function CartPage() {
             <p>Frakt: {SHIPPING_COST} kr</p>
             <p className="font-bold text-xl">Totalt: {totalWithShipping} kr</p>
 
-            <div className="mt-4 space-y-3 space-x-4">
+            <div className="mt-4 flex flex-col items-end space-y-3 md:flex-row md:justify-end md:space-x-4 md:space-y-0">
               <Button onClick={handleSend} className="font-semibold text-white">
                 Skicka beställning via mail
               </Button>
