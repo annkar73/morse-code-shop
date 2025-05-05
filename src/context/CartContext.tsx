@@ -18,25 +18,33 @@ export const CartContext = createContext<ICartContext | undefined>(undefined)
 
 export function CartProvider({ children }: { children: ReactNode }) {
 
-  const loadCartFromStorage = () => {
-    if (typeof window !== "undefined") {
+  // Vi använder en state för att hålla koll på om vi är på klienten eller inte
+  const [isClient, setIsClient] = useState(false)
+  const [cart, setCart] = useState<ICartItem[]>([])
+
+  // Sätt isClient till true när komponenten är mounted på klienten
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // När vi är på klienten, ladda cart från localStorage
+  useEffect(() => {
+    if (isClient) {
       const storedCart = localStorage.getItem("cart")
       if (storedCart) {
-        return JSON.parse(storedCart)
+        setCart(JSON.parse(storedCart))
       }
     }
-    return []
-  }
-  const [cart, setCart] = useState<ICartItem[]>(loadCartFromStorage)
+  }, [isClient]) // Kör denna effect när isClient blir true
 
+  // Spara cart till localStorage när den förändras
   useEffect(() => {
-    if (cart.length > 0) {
-      localStorage.setItem("cart", JSON.stringify(cart)) 
-    }
-    else {
+    if (isClient && cart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(cart))
+    } else if (isClient && cart.length === 0) {
       localStorage.removeItem("cart")
     }
-  }, [cart])
+  }, [cart, isClient]) // Kör när cart eller isClient förändras
 
   const addToCart = (product: IProduct, quantity: number) => {
     setCart((prev) => {
@@ -50,13 +58,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
     })
   }
+
   const updateQuantity = (productId: number, quantity: number) => {
     setCart((prev) =>
       prev.map((item) =>
         item.id === productId ? { ...item, quantity } : item
       )
-    );
-  };
+    )
+  }
 
   const removeFromCart = (productId: number) => {
     setCart((prev) => prev.filter((item) => item.id !== productId))
