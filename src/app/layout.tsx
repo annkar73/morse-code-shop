@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-background text-foreground">
       <CartProvider>
 
-        <header className="border-b w-full bg-[var(--color-green-dark)] text-[var(--color-white)]">
+        <header className="w-full bg-[var(--color-green-dark)] text-[var(--color-white)]">
           <MainNav />
         </header>
 
