@@ -17,7 +17,7 @@ export default function HomePage() {
   <section className="bg-white p-6 rounded shadow-md mb-10">
     <h2 className="text-2xl font-semibold text-[var(--color-green-dark)] text-center mb-6">På Signalarmband skapar vi armband med attityd.</h2>
     <p className="text-lg text-center text-[var(--color-black)]">
-      På Signalarmband skapar vi mer än bara smycken. Varje pärla bär ett dolt budskap – ibland kärleksfullt, ibland kaxigt, ibland bara för dig. Det ser kanske ut som ett vanligt armband, men den som kan morsekod vet bättre.
+      På Signalarmband skapar vi mer än bara smycken. Varje armband bär ett dolt budskap – ibland kärleksfullt, ibland kaxigt, ibland bara för dig. Det ser kanske ut som ett vanligt armband, men den som kan morsekod vet bättre.
     </p>
   </section>
 
@@ -28,7 +28,7 @@ export default function HomePage() {
     </p>
     <Link href="/products">
     <Button className="w-full py-2 px-4 bg-[var(--color-pink-dark)] text-white font-semibold text-lg rounded-md">
-      Gå till produktlista
+      Gå till produkter
     </Button>
     </Link>
   </section>
