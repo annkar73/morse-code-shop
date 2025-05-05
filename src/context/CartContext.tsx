@@ -1,5 +1,5 @@
 "use client"
-import { createContext, useContext, useState, ReactNode } from "react"
+import { createContext, useContext, useState, ReactNode, useEffect } from "react"
 import { IProduct } from "@/components/ProductCard"
 
 interface ICartItem extends IProduct {
@@ -17,7 +17,26 @@ interface ICartContext {
 export const CartContext = createContext<ICartContext | undefined>(undefined)
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<ICartItem[]>([])
+
+  const loadCartFromStorage = () => {
+    if (typeof window !== "undefined") {
+      const storedCart = localStorage.getItem("cart")
+      if (storedCart) {
+        return JSON.parse(storedCart)
+      }
+    }
+    return []
+  }
+  const [cart, setCart] = useState<ICartItem[]>(loadCartFromStorage)
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(cart)) 
+    }
+    else {
+      localStorage.removeItem("cart")
+    }
+  }, [cart])
 
   const addToCart = (product: IProduct, quantity: number) => {
     setCart((prev) => {
