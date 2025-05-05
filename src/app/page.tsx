@@ -32,6 +32,9 @@ export default function HomePage() {
     </Button>
     </Link>
   </section>
+  <p className="text-sm text-center text-[var(--color-black)] mb-6">
+    Sidan är under uppbyggnad och kommer att uppdateras med korrekta produktbilder och fler funktioner inom kort.
+  </p>
 </main>
   );
 }
