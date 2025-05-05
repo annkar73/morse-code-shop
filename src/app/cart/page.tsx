@@ -79,7 +79,7 @@ export default function CartPage() {
 
             <div className="mt-4 flex flex-col items-end space-y-3 md:flex-row md:justify-end md:space-x-4 md:space-y-0">
               <Button onClick={handleSend} className="font-semibold text-white">
-                Skicka beställning via mail
+                Skicka beställning
               </Button>
               <Button
                 className="bg-[var(--color-pink-sharp)] hover:bg-[var(--color-pink-sharp)]/90 text-black font-semibold"
