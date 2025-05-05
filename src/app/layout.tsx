@@ -3,7 +3,7 @@ import "./globals.css"
 import { CartProvider } from "context/CartContext"
 
 export const metadata = {
-  title: "Min webshop",
+  title: "Signalarmband - Pärlor med mening",
   description: "En enkel webshop byggd med Next.js och shadcn/ui",
 }
 
