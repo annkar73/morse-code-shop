@@ -14,7 +14,7 @@ export const products: IProduct[] = [
   { id: 10, name: "Kuken", description: "", price: 129, image: "/images/bracelets.jpeg" },
   { id: 11, name: "Shut Up", description: "", price: 99, image: "/images/bracelets.jpeg" },
   { id: 12, name: "Do Epic Shit", description: "", price: 99, image: "/images/bracelets.jpeg" },
-  { id: 13, name: "Yall Need Jesus", description: "", price: 99, image: "/images/bracelets.jpeg" },
+  { id: 13, name: "Y'all Need Jesus", description: "", price: 99, image: "/images/bracelets.jpeg" },
   { id: 14, name: "I Like Boys", description: "", price: 99, image: "/images/bracelets.jpeg" },
   { id: 15, name: "I Like Girls", description: "", price: 99, image: "/images/bracelets.jpeg" },
   { id: 16, name: "Proud Gay", description: "", price: 99, image: "/images/bracelets.jpeg" },
