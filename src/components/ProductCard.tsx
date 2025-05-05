@@ -17,9 +17,9 @@ export interface IProduct {
 
 export function ProductCard({ product }: { product: IProduct }) {
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useCart(); // Assuming you have a CartContext to manage the cart
+  const { addToCart } = useCart(); 
   return (
-    <Card className="max-w-sm w-full shadow-md overflow-hidden bg-[var(--color-pink-light)] border border-[var(--color-pink-dark)] rounded-lg hover:shadow-lg transition-shadow duration-300 ease-in-out">
+    <Card className="max-w-sm w-full shadow-md overflow-hidden bg-[var(--color-pink-light)] border-2 border-[var(--color-pink-dark)] rounded-lg hover:shadow-lg transition-shadow duration-300 ease-in-out">
       <div className="bg-[var(--color-pink-light)] h-48 flex items-center justify-center text-[var(--color-black)] text-sm">
       <Image
           src={product.image} 
