@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧵 Signalarmband
 
-## Getting Started
+**Signalarmband** är en personlig och minimalistisk webbshop för dig som vill beställa handgjorda armband med tydliga, kaxiga eller raka budskap – skrivna i morsekod. Här är det inte gulliga ord som gäller, utan armband som säger saker som *"fuck off"*, *"shut up"*, eller andra budskap med attityd. 
 
-First, run the development server:
+Varje armband tillverkas för hand och skickas med omtanke. Du väljer budskap, lägger det i kundvagnen och skickar din beställning via mail. Betalning sker enkelt via Swish.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💡 Funktioner
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Lägg till produkter i kundvagnen
+- Justera kvantitet för varje produkt
+- Beställ genom att skicka innehållet i ett förifyllt mail
+- Betala via Swish (QR-kod med totalsumma kommer snart)
+- Automatisk fraktavgift på 29 kr oavsett antal armband
+- Enkla animationer och responsiv design för mobil och desktop
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js** med **React** och **TypeScript**
+- **Tailwind CSS** för styling
+- **Lucide Icons** för ikoner
+- **Context API** för kundvagnslogik
+- Mailto-lösning för beställning utan backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🖥️ Live
 
-## Deploy on Vercel
+Du hittar den publika versionen här:  
+👉 [signalarmband.vercel.app](https://morse-bracelet.vercel.app) 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧵 Om projektet
+
+Detta är ett hobbyprojekt och en prototyp som kombinerar kod med hantverk. Sidan är inte byggd för massbeställningar eller automatiserad e-handel, utan för att på ett enkelt sätt samla in beställningar från de som gillar idén med annorlunda och kaxiga smycken.
+
